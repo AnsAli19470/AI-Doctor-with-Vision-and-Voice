@@ -56,18 +56,6 @@ python gradio_app.py
 - `.env` — API keys (not tracked in git).
 - `requirements.txt` — Python dependencies.
 
-## Example
-
-```python
-from brain_of_the_doctor import encode_image, analyze_imaege_with_querry
-from voice_of_the_patient import transcribe_with_groq
-from voice_of_the_doctor import text_to_speech_with_gtts
-
-speech_text = transcribe_with_groq('whisper-large-v3', 'patient_voice.mp3', GROQ_API_KEY)
-image_b64 = encode_image('mm.jpg')
-doctor_response = analyze_imaege_with_querry(system_prompt + speech_text, model, image_b64)
-text_to_speech_with_gtts(doctor_response, 'final.mp3')
-```
 
 ## Contributing
 
